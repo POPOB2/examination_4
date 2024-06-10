@@ -34,3 +34,9 @@ function login(table){
 		}
 	})
 }
+
+function logout(table){
+	$.get("./api/logout.php", {table}, ()=>{
+		location.href='index.php'
+	})
+}
