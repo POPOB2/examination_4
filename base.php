@@ -110,6 +110,7 @@ function dd($array){
 
 $Bot=new DB('classb_4_bot');
 $Mem=new DB('classb_4_mem');
+$Admin=new DB('classb_4_admin');
 ?>
 
 
