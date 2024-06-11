@@ -30,18 +30,18 @@ $row=$Mem->find($_GET['id']);
     </tr>
 </table>
 <div class="ct">
-    <button onclick="edit('classb_4_mem',<?=$row['id'];?>)">編輯</button>
+    <button onclick="edit('classb_4_mem','mem',<?=$row['id'];?>)">編輯</button>
     <button onclick="location.reload()">重置</button>
     <button onclick="location.href='?do=mem'">取消</button>
 </div>
 
 <script>
-    function edit(table,id){
-        let form=$('#editForm input').serializeArray() //serializeArray()會把拿到的資料先map()一次, 再把key帶為字串
+    function edit(table,where,id){
+        let form=$('#editForm input').serializeArray() //serializeArray()會把拿到的資料先map()一次, 再把key轉為表單的字串內容, 以陣列的方式呈現
 
 	$.post("./api/edit.php", {table,form,id}, (res)=>{
-        location.href=`?do=${table}`
-        // location.href='?do=mem'
+        // console.log(res);
+        location.href=`?do=${where}`
     })
 }
 </script>
