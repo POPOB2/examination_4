@@ -15,8 +15,8 @@
     <td><?=$row['acc'];?></td>
     <td><?=$row['regdate'];?></td>
     <td>
-        <button onclick="edit(''<?=$row['id'];?>)">修改</button>
-        <button onclick="del('classb_4_mem',<?=$row['id'];?>)">刪除</button>
+        <button onclick="location.href='?do=edit_mem&id=<?=$row['id'];?>'">修改</button>
+        <button onclick="del('classb_4_mem', <?=$row['id'];?>)">刪除</button>
     </td>
 </tr>
 <?php     
