@@ -4,7 +4,7 @@ $pr=unserialize($row['pr']); // 將其反序列化, 變成陣列
 
 ?>
 <h2 class="ct">修改管理員權限</h2>
-<form id='addForm' action="./api/edit_admin.php" method="post">
+<form id='addForm' action="./api/save_admin.php" method="post">
 <table class="all" >
     <tr>
         <td class="tt ct">帳號</td>
