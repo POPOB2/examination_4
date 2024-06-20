@@ -27,11 +27,14 @@ include_once "base.php";
         <div id="left" class="ct">
             <div style="min-height:400px;">
                 <a href="?do=admin">管理權限設置</a>
-                <a href="?do=th">商品分類與管理</a>
-                <a href="?do=order">訂單管理</a>
-                <a href="?do=mem">會員管理</a>
-                <a href="?do=bot">頁尾版權管理</a>
-                <a href="?do=news">最新消息管理</a>
+<?php
+// SESSION[pr]裡有數字即有權限, 才顯示該功能
+                echo (in_array(1,$_SESSION['pr']))?"<a href='?do=th'>商品分類與管理</a>":"";
+                echo (in_array(2,$_SESSION['pr']))?"<a href='?do=order'>訂單管理</a>":"";
+                echo (in_array(3,$_SESSION['pr']))?"<a href='?do=mem'>會員管理</a>":"";
+                echo (in_array(4,$_SESSION['pr']))?"<a href='?do=bot'>頁尾版權管理</a>":"";
+                echo (in_array(5,$_SESSION['pr']))?"<a href='?do=news'>最新消息管理</a>":"";
+?>
                 <a href="?do=logout" style="color:#f00;" onclick="logout('classb_4_admin')">登出</a>
             </div>
         </div>
